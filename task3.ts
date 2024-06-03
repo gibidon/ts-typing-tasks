@@ -8,7 +8,7 @@ type IPost = {
 	body: string
 }
 
-const COMMENTS_URL = "https://jsonplaceholder.typicode.com/comments"
+const COMMENTS_URL = "https://jsonplaceholder.typicode.com/comments?_limit=5"
 
 function getData(url: string): Promise<IPost[]> {
 	return fetch(url).then(res => res.json())
